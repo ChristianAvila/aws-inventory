@@ -17,23 +17,13 @@ This is a fork of NCC's aws-inventory tool. There are three differences;
   
 # Installation
 
-First, install Python2.7.
+Install python 3 and create new virtual environment
 
-There is a small GUI for displaying progress which uses the standard Python *Tkinter* module. However, the underlying native library code for Tcl/Tk may need extra steps to install. Then,
-
-`pip install -r requirements.txt`
-
-## Windows
-
-Use the Python installer to install Tkinter/Tcl/Tk.
-
-## Linux
-
-Use your OS package manager:
-
-### Ubuntu / Debian
-
-`sudo apt-get install python-tk`
+```sh
+virtualenv venv --python=python3
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 # Usage
 
