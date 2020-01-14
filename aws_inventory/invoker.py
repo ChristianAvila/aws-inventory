@@ -75,9 +75,10 @@ class ApiInvoker(object):
                             config=client_config
                         )
                     except botocore.exceptions.NoRegionError:
-                        self.progress.write('[%s][%s] Issue in region detection. Using default region.',
-                                       config.DEFAULT_REGION,
-                                       svc_name)
+                        # self.progress.write('[%s][%s] Issue in region detection. Using default region.',
+                        #                config.DEFAULT_REGION,
+                        #                svc_name)
+                        LOGGER.debug('Issue in region detection. Using default region.')
                         client = session.create_client(
                             svc_name,
                             region_name=config.DEFAULT_REGION,
