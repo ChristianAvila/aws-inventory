@@ -4,6 +4,7 @@ account resources. Others may be too verbose or not relevant for some users of t
 """
 
 import configparser
+import re
 import logging
 
 
@@ -46,4 +47,9 @@ class OpBlacklistParser(object):
         :rtype: bool
         :return: whether operation (in a service) has been blacklisted
         """
+        if self._cfg_parser.has_section('all'):
+            for option in self._cfg_parser.options('all'):
+                if re.search(option, op_name):
+                    return True
+
         return self._cfg_parser.has_option(svc_name, op_name)
