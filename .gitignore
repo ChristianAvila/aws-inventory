@@ -4,3 +4,4 @@ gui/test/aws_inventory_data*.json
 /.idea/workspace.xml
 .vscode
 venv/
+gui/aws_inventory*.json
