@@ -1,7 +1,14 @@
-*.dump
-gui/test/aws_inventory_data*.json
-*.pyc
+# IDE configuration
 /.idea/workspace.xml
 .vscode
+
+# python code
 venv/
+.notes
+*.pyc
+*.dump
+
+# application extra files
 gui/aws_inventory*.json
+gui/test/aws_inventory_data*.json
+
